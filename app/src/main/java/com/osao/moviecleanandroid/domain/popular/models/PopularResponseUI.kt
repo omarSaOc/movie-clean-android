@@ -1,14 +1,12 @@
-package com.osao.moviecleanandroid.data.network.models.response
+package com.osao.moviecleanandroid.domain.popular.models
 
 import com.google.gson.annotations.SerializedName
 
-data class UpcomingResponse(
-    @SerializedName("dates")
-    val dates: Dates,
+class PopularResponseUI (
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")
-    val results: List<UpcomingMovie>,
+    val results: List<PopularMovieUI>,
     @SerializedName("total_pages")
     val total_pages: Int,
     @SerializedName("total_results")
