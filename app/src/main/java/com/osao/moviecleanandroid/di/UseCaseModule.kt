@@ -2,6 +2,8 @@ package com.osao.moviecleanandroid.di
 
 import com.osao.moviecleanandroid.domain.popular.repository.PopularRepository
 import com.osao.moviecleanandroid.domain.popular.use_cases.PopularUseCase
+import com.osao.moviecleanandroid.domain.top_rated.repository.TopRatedRepository
+import com.osao.moviecleanandroid.domain.top_rated.use_cases.TopRatedUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,4 +19,12 @@ object UseCaseModule {
     ): PopularUseCase {
         return PopularUseCase(popularRepository)
     }
+
+    @Provides
+    fun provideTopRatedUseCase(
+        topRatedRepository: TopRatedRepository
+    ): TopRatedUseCase {
+        return TopRatedUseCase(topRatedRepository)
+    }
+
 }

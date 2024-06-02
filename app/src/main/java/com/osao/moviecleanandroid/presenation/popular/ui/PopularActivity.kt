@@ -1,5 +1,6 @@
 package com.osao.moviecleanandroid.presenation.popular.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -8,6 +9,7 @@ import com.osao.moviecleanandroid.databinding.ActivityPopularBinding
 import com.osao.moviecleanandroid.domain.popular.models.PopularResponseUI
 import com.osao.moviecleanandroid.presenation.popular.ui.adapter.PopularAdapter
 import com.osao.moviecleanandroid.presenation.popular.viewmodel.PopularViewModel
+import com.osao.moviecleanandroid.presenation.top_rated.ui.TopRatedActivity
 import com.osao.moviecleanandroid.utils.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,8 +40,8 @@ class PopularActivity : BaseActivity() {
 
     private fun listener() = with(binding) {
         fab.setOnClickListener {
-//            val intent = Intent(this@PopularActivity, TopRatedActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this@PopularActivity, TopRatedActivity::class.java)
+            startActivity(intent)
         }
 
         swipeRefreshLayout.setOnRefreshListener {
