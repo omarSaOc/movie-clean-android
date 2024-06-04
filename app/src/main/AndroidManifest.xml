@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MovieCleanAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".presenation.upcoming.ui.UpcomingActivity"
+            android:exported="false" />
+        <activity
             android:name=".presenation.top_rated.ui.TopRatedActivity"
             android:exported="false" />
         <activity

@@ -1,5 +1,6 @@
 package com.osao.moviecleanandroid.presenation.top_rated.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,6 +11,7 @@ import com.osao.moviecleanandroid.databinding.ActivityTopRatedBinding
 import com.osao.moviecleanandroid.domain.top_rated.models.TopRatedResponseUI
 import com.osao.moviecleanandroid.presenation.top_rated.ui.adapter.TopRatedAdapter
 import com.osao.moviecleanandroid.presenation.top_rated.viewmodel.TopRatedViewModel
+import com.osao.moviecleanandroid.presenation.upcoming.ui.UpcomingActivity
 import com.osao.moviecleanandroid.utils.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -43,8 +45,8 @@ class TopRatedActivity : BaseActivity() {
 
     private fun listener() = with(binding) {
         fab.setOnClickListener {
-//            val intent = Intent(this@TopRatedActivity, UpcomingActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this@TopRatedActivity, UpcomingActivity::class.java)
+            startActivity(intent)
         }
 
         swipeRefreshLayout.setOnRefreshListener {
